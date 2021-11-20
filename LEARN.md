@@ -6,7 +6,7 @@ By the end of this quest, you will have your very own cryptocurrency over the So
 
 A prerequisite for the quest is knowing the basics of React (a JS frontend framework). 
 
-# Initial Setup
+## Initial Setup
 
 Moving forward, you need to have a working installation of node and npm (Node Package Manager) is used to manage packages. Having a code editor like VS Code will be very helpful during the development of the application. 
 
@@ -63,7 +63,7 @@ Solana web3.js will be used for interacting and minting our new
 The @solana/web3.js is a typescript library that can be installed using npm. This library is developed by Solana labs itself to perform common interactions with the Solana blockchain using only Typescript.
 The spl-token library is also a typescript library by Solaba Labs to perform the most common operations on the Solana blockchain related to spl tokens using Typescript.
 
-# Installing Phantom Wallet 
+## Installing Phantom Wallet 
 
 Like your personal wallets, there are various software wallets which can hold your tokens. We will be using a crypto wallet called phantom wallet in this quest. 
 
@@ -79,7 +79,7 @@ Since in this quest we are transacting in devnet, we can change the network in P
 
 You can find out the wallet address of your Phantom wallet by clicking on the wallet’s name. This wallet address is the public address of your wallet that can be used to receive funds.
 
-# Connecting with Phantom Wallet
+## Connecting with Phantom Wallet
 
 Let’s add a “connect to wallet” functionality to our application, that’ll allow your users to connect to solCurrency through their Phantom wallets.
 We’ll be creating a useState hook to store information regarding whether the wallet is connected or not, and we’ll be creating another state (called provider) to store the wallet info with which the user logs in. A loading state is also created.
@@ -138,7 +138,7 @@ Due to installing @solana/web3.js , we now have access to the “solana” varia
 
 And now, you can connect to your wallet and get your Public key address on the screen like this. 
 
-# Sending yourself some SOL
+## Sending yourself some SOL
 
 To perform any kind of action on the blockchain, we are charged some fees. For the Solana blockchain, the fees are paid in Solana’s native currency called SOL.
 Since we’ll be performing multiple transactions while developing our application, we’ll perform all the transactions over the devnet.
@@ -184,7 +184,7 @@ The confirmTransaction  allows us to pass in a signed transaction as an argument
 A console.log in the browser console can be seen upon successful airdrop of 1 SOL. The loading state is used before and after the transactions so that during that time no CTAs are done.
 You can also confirm this by checking the Phantom wallet.
 
-# Minting your Tokens
+## Minting your Tokens
 
 It's time, you are ready to create your own token. There are a couple of other things which need to be imported first for executing the initial mint.
 
@@ -270,7 +270,7 @@ In the Phantom wallet you can see, one unknown token has been created.
 
 ![7](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/7.png)
 
-# Minting more tokens
+## Minting more tokens
 
 Now that we’ve created and minted our tokens for the very first time, let’s see how we can mint more tokens. It is totally similar to the initial mint with the only difference being, the mint object is being created here using the Token constructor (instead of using createMint again) and we also create the tokenMintingWallet. 
 The UI will have one Mint Again button after the isTokenCreated state is true, i.e., after the Initial Mint is done.
@@ -326,7 +326,7 @@ The constructor returns the exact mint which is referred to as creatorToken and 
 We set up the fromTokenAccount, and then use the mintTo functions. It mints more tokens.
 Later, we transfer the minted tokens to our actual phantom wallet accounts to view. 
 
-# Transferring tokens to your friends
+## Transferring tokens to your friends
 
 Now that we’ve created our tokens, let’s try sending these tokens to our friend’s wallet.
 You can think of an SPL wallet (wallet that stores tokens on Solana) as a bank and all other tokens as the accounts in that bank. Unless you send an instruction to your friend to create an account in their wallet for your token, they won’t really be able to see it or even receive it.
@@ -375,7 +375,7 @@ As earlier, we first established a connection to the Solana devnet. Then we prep
 With this, we head into the most important step of our code: The transaction along with instructions. We fill in the instructions such as who’ll be paying the fee for the transaction and account creation, who will receive the tokens and from whom and we also provide it the most recent block of the blockchain (hash of the block to be precise) to carry forth the transaction. After the transaction instructions have been created, we now sign it with our wallet credentials and send this transaction to our friend and later on confirm whether the transaction took place or not.
 Congratulations, you just started transactions in your custom cryptocurrency now.
 
-# Capping Token Supply
+## Capping Token Supply
 
 Let’s say you are creating tokens to raise money for your next project. You plan on creating 100 tokens and sell it to your investors that represents their ownership of the project. The investors might be sceptical to invest in your project as you possess the ability to always create more tokens and reduce their ownership in the project. Hence, they would want you to “renounce the ownership” of your token. That way, there’ll always be only 100 tokens in circulation forever.   
 Solana provides us the ability to disable our minting authority, and never enable it back i.e. “capping the supply” of our token. 
@@ -411,7 +411,7 @@ Your final web page should look like this.
 
 ![8](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/8.png)
 
-# Naming your Tokens
+## Naming your Tokens
 
 In Phantom wallet, we see that our token is listed as an “Unknown Token”. If we want our token to have a widely recognised name, symbol and image, we need to send a pull request to the [solana-labs/token-list: The community maintained Solana token registry repository](https://github.com/solana-labs/token-list).
 
@@ -438,6 +438,6 @@ The JSON entry would have the following structure.
 
 Once the PR gets approved, you’ll be able to view the token image and name on every wallet in the Solana ecosystem.
 
-# Conclusion
+## Conclusion
 
 Congratulations to all the quest masters on creating their very first personal token minting website. You’re now armed with all the knowledge required to mint your personal tokens and distribute them with your friends!
