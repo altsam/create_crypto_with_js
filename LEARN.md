@@ -440,4 +440,4 @@ Once the PR gets approved, you’ll be able to view the token image and name on 
 
 ## Conclusion
 
-Congratulations to all the quest masters on creating their very first personal token minting website. You’re now armed with all the knowledge required to mint your personal tokens and distribute them with your friends!
+Congratulations to all the quest masters on creating their very first personal token minting website. You’re now armed with all the knowledge required to mint your personal tokens and distribute them with your friends! A small reward for you armory: an NFT for completing this quest! Claim it [here](https://alpha.layer3.xyz/task/create-your-personal-cryptocurrency-with-javascript).
