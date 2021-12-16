@@ -246,7 +246,7 @@ const initialMintHelper = async () => {
        
        console.log("SIGNATURE:",signature);
        
-       setCreatedTokenPublicKey(creatorToken.publicKey.toString());
+       setCreatedTokenPublicKey(creatorToken.publicKey);
        setIsTokenCreated(true);
        setLoading(false);
    } catch(err) {
