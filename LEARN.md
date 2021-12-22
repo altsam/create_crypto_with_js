@@ -23,7 +23,7 @@ npm start
 
 A new tab in your default browser will open with the following webpage.
 
-![1](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/1.png)
+![1](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/1.png)
 
 Congratulations. You have successfully created your first react-app.
 
@@ -53,7 +53,7 @@ const App = () => {
 export default App;
 ```
 
-![2](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/2.png)
+![2](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/2.png)
 
 For creating our product, we’ll be using two packages. Please install the mentioned two npm packages, using the following command.
 ```
@@ -75,7 +75,7 @@ Every wallet on the Solana blockchain has a unique identifier, called the public
 The original Solana blockchain where the actual transactions happen is known as the mainnet. To perform any transaction on the Solana blockchain, you’re charged a transaction fee. These payments happen in a currency called SOL. Solana also maintains clusters called devnet and testnet. Devnet is the replica of the Solana’s mainnet, and serves as a playground for anyone who wants to try out the features of Solana. Cryptos that reside in devnet don’t have any value.
 Since in this quest we are transacting in devnet, we can change the network in Phantom to devnet. To do so, click on the cog wheel in the bottom right corner of your Phantom wallet, click on “Change network” and select “Devnet”.
 
-![3](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/3.png) ![4](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/4.png)
+![3](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/3.png) ![4](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/4.png)
 
 You can find out the wallet address of your Phantom wallet by clicking on the wallet’s name. This wallet address is the public address of your wallet that can be used to receive funds.
 
@@ -134,7 +134,7 @@ const walletConnectionHelper = async () => {
 The “walletConnectionHelper” checks whether the wallet is connected or not using the state. If connected, then it updates the state of “walletConnected” and removes the wallet info stored in the provider state. If the wallet is not connected (in the else block), the user wallet instance is fetched from the function “getProvider”. 
 Due to installing @solana/web3.js , we now have access to the “solana” variable globally in the window. So, it fetches the wallet info from the global variable or opens the phantom wallet instance. After getting the instance from the getProvider function, on successful connection, the wallet is stored in the provider state. 
 
-![5](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/5.png)
+![5](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/5.png)
 
 And now, you can connect to your wallet and get your Public key address on the screen like this. 
 
@@ -189,7 +189,7 @@ You can also confirm this by checking the Phantom wallet.
 
 It's time, you are ready to create your own token. There are a couple of other things which need to be imported first for executing the initial mint.
 
-![6](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/6.png)
+![6](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/6.png)
 
 ```
 import { Keypair, Transaction, sendAndConfirmTransaction } from '@solana/web3.js';
@@ -275,7 +275,7 @@ Congratulations, you have successfully minted your first token on Solana. Where 
 At the end, we store the publicKey of the creatorToken to recreate the coin while minting again, or transferring tokens. We also store in a state that the token has been created successfully (in isTokenCreated). 
 In the Phantom wallet you can see, one unknown token has been created.
 
-![7](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/7.png)
+![7](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/7.png)
 
 ## Minting more tokens
 
@@ -435,13 +435,13 @@ Now you’ve learnt how to fix the supply of your token too, and guess what, if 
 
 Your final web page should look like this.
 
-![8](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/8.png)
+![8](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/8.png)
 
 ## Naming your Tokens
 
 In Phantom wallet, we see that our token is listed as an “Unknown Token”. If we want our token to have a widely recognised name, symbol and image, we need to send a pull request to the [solana-labs/token-list: The community maintained Solana token registry repository](https://github.com/solana-labs/token-list).
 
-![9](https://github.com/altsam/create_crypto_with_js/blob/main/learn_assets/9.png)
+![9](https://github.com/altsam/create_crypto_with_js/raw/main/learn_assets/9.png)
 
 Add an entry to the “solana.tokenlist.json” file in the “src/tokens” directory.
 The JSON entry would have the following structure.
